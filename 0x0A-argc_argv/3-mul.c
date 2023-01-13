@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main- multiply two numbers
@@ -10,7 +11,7 @@
 int main(int argc, char **argv)
 {
 	int i, j;
-
+	
 	i = atoi(argv[1]);
 	j = atoi(argv[2]);
 
