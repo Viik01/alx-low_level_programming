@@ -1,23 +1,16 @@
 #include "main.h"
-#include <stdio.h>
 #include <stdlib.h>
 
 /**
- * main - check the code for ALX School students.
- * @ac: detail
- * @av: av
- * Return: Always 0.
+ * free_grid - frees a 2 dimensional grid
+ * @grid: the grid
+ * @height: height of the grid
  */
-int main(int ac, char *av[])
+void free_grid(int **grid, int height)
 {
-	char *s;
+	int i;
 
-	s = argstostr(ac, av);
-	if (s == NULL)
-	{
-		return (1);
-	}
-	printf("%s", s);
-	free(s);
-	return (0);
+	for (i = 0; i < height; i++)
+		free(grid[i]);
+	free(grid);
 }
